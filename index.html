@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,8 @@
     <meta name="description" content="Portfolio of Ali Arafa Mohamed Sayed - IT Student specializing in Network Engineering, CCNA Certified.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,21 +21,25 @@
                 <span class="logo-bracket">&lt;</span>Ali<span class="logo-dot">.</span>Arafa<span class="logo-bracket"> /&gt;</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certificates" class="nav-link">Certificates</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav-skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-i18n="nav-certificates">Certificates</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav-education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
             </ul>
             <div class="nav-right">
+                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                    <i class="fas fa-globe"></i>
+                    <span class="lang-toggle-text">عربي</span>
+                </button>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
                 <a href="cv.pdf" download class="btn-download-cv">
                     <i class="fas fa-download"></i>
-                    <span>Download CV</span>
+                    <span data-i18n="download-cv">Download CV</span>
                 </a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -48,20 +51,24 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-nav-links">
-            <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
-            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-            <li><a href="#certificates" class="mobile-nav-link">Certificates</a></li>
-            <li><a href="#education" class="mobile-nav-link">Education</a></li>
-            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li><a href="#about" class="mobile-nav-link" data-i18n="nav-about">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link" data-i18n="nav-skills">Skills</a></li>
+            <li><a href="#experience" class="mobile-nav-link" data-i18n="nav-experience">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link" data-i18n="nav-projects">Projects</a></li>
+            <li><a href="#certificates" class="mobile-nav-link" data-i18n="nav-certificates">Certificates</a></li>
+            <li><a href="#education" class="mobile-nav-link" data-i18n="nav-education">Education</a></li>
+            <li><a href="#contact" class="mobile-nav-link" data-i18n="nav-contact">Contact</a></li>
         </ul>
+        <button class="lang-toggle mobile-lang-toggle" id="mobileLangToggle" aria-label="Toggle language">
+            <i class="fas fa-globe"></i>
+            <span class="lang-toggle-text">عربي</span>
+        </button>
         <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
             <i class="fas fa-moon" id="mobileThemeIcon"></i>
-            <span>Toggle Theme</span>
+            <span data-i18n="toggle-theme">Toggle Theme</span>
         </button>
         <a href="cv.pdf" download class="btn-download-cv mobile-cv-btn">
-            <i class="fas fa-download"></i><span>Download CV</span>
+            <i class="fas fa-download"></i><span data-i18n="download-cv">Download CV</span>
         </a>
     </div>
 
@@ -69,27 +76,27 @@
     <section class="hero" id="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge"><span class="badge-dot"></span><span>Open to Opportunities</span></div>
+                <div class="hero-badge"><span class="badge-dot"></span><span data-i18n="hero-badge">Open to Opportunities</span></div>
                 <h1 class="hero-title">
-                    <span class="hero-greeting">Hi, I'm</span>
-                    <span class="hero-name">Ali Arafa</span>
+                    <span class="hero-greeting" data-i18n="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name" data-i18n="hero-name">Ali Arafa</span>
                 </h1>
                 <div class="hero-role">
                     <span class="role-prefix">&gt;</span>
                     <span class="typewriter" id="typewriter"></span>
                     <span class="cursor">|</span>
                 </div>
-                <p class="hero-description">Third-year IT student specializing in Network Engineering with CCNA certifications and hands-on experience in networking, IT support, and software development.</p>
+                <p class="hero-description" data-i18n="hero-description">Third-year IT student specializing in Network Engineering with CCNA certifications and hands-on experience in networking, IT support, and software development.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span>Get in Touch</span></a>
-                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-folder-open"></i><span>View Projects</span></a>
+                    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i><span data-i18n="hero-btn-contact">Get in Touch</span></a>
+                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-folder-open"></i><span data-i18n="hero-btn-projects">View Projects</span></a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat-item"><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span><span class="stat-label">Certificates</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span><span class="stat-label" data-i18n="stat-certificates">Certificates</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item"><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="6">0</span><span class="stat-plus">+</span><span class="stat-label" data-i18n="stat-projects">Projects</span></div>
                     <div class="stat-divider"></div>
-                    <div class="stat-item"><span class="stat-number" data-target="3">0</span><span class="stat-label">CCNA Certs</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="3">0</span><span class="stat-label" data-i18n="stat-ccna">CCNA Certs</span></div>
                 </div>
             </div>
             <div class="hero-image-wrapper">
@@ -98,9 +105,9 @@
                     <div class="image-ring ring-1"></div>
                     <div class="image-ring ring-2"></div>
                     <img src="profile.jpg" alt="Ali Arafa" class="hero-image">
-                    <div class="floating-badge badge-cisco"><i class="fas fa-network-wired"></i><span>CCNA</span></div>
-                    <div class="floating-badge badge-iti"><i class="fas fa-code"></i><span>NTI</span></div>
-                    <div class="floating-badge badge-network"><i class="fas fa-server"></i><span>Network</span></div>
+                    <div class="floating-badge badge-cisco"><i class="fas fa-network-wired"></i><span data-i18n="badge-ccna">CCNA</span></div>
+                    <div class="floating-badge badge-iti"><i class="fas fa-code"></i><span data-i18n="badge-nti">NTI</span></div>
+                    <div class="floating-badge badge-network"><i class="fas fa-server"></i><span data-i18n="badge-network">Network</span></div>
                 </div>
             </div>
         </div>
@@ -111,22 +118,22 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;About /&gt;</span>
-                <h2 class="section-title">About Me</h2>
+                <span class="section-tag" data-i18n="about-tag">&lt;About /&gt;</span>
+                <h2 class="section-title" data-i18n="about-title">About Me</h2>
                 <div class="section-line"></div>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I'm a <strong>third-year Information Technology student</strong> specializing in Network Engineering at Fayoum International Technological University.</p>
-                    <p>Certified through <strong>Cisco Networking Academy</strong> with a strong foundation in CCNA-based networking, routing & switching, and basic cybersecurity concepts.</p>
-                    <p>Currently a trainee at the <strong>Information Technology Institute (ITI)</strong>, gaining practical experience in mobile application development and system integration.</p>
-                    <p>I'm seeking an <strong>internship or entry-level position</strong> in IT Support or Networking to apply my academic knowledge and technical skills in a real-world environment.</p>
+                    <p data-i18n="about-p1">I'm a <strong>third-year Information Technology student</strong> specializing in Network Engineering at Fayoum International Technological University.</p>
+                    <p data-i18n="about-p2">Certified through <strong>Cisco Networking Academy</strong> with a strong foundation in CCNA-based networking, routing & switching, and basic cybersecurity concepts.</p>
+                    <p data-i18n="about-p3">Currently a trainee at the <strong>Information Technology Institute (ITI)</strong>, gaining practical experience in mobile application development and system integration.</p>
+                    <p data-i18n="about-p4">I'm seeking an <strong>internship or entry-level position</strong> in IT Support or Networking to apply my academic knowledge and technical skills in a real-world environment.</p>
                 </div>
                 <div class="about-info-cards">
-                    <div class="info-card"><div class="info-icon"><i class="fas fa-graduation-cap"></i></div><div class="info-content"><h4>Education</h4><p>B.IT - Network Engineering</p></div></div>
-                    <div class="info-card"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="info-content"><h4>Location</h4><p>El Qanater El Khayria, Egypt</p></div></div>
-                    <div class="info-card"><div class="info-icon"><i class="fas fa-certificate"></i></div><div class="info-content"><h4>Certifications</h4><p>CCNA Certified (3 Modules)</p></div></div>
-                    <div class="info-card"><div class="info-icon"><i class="fas fa-briefcase"></i></div><div class="info-content"><h4>Status</h4><p>Open for Opportunities</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-graduation-cap"></i></div><div class="info-content"><h4 data-i18n="info-education-title">Education</h4><p data-i18n="info-education-text">B.IT - Network Engineering</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-map-marker-alt"></i></div><div class="info-content"><h4 data-i18n="info-location-title">Location</h4><p data-i18n="info-location-text">El Qanater El Khayria, Egypt</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-certificate"></i></div><div class="info-content"><h4 data-i18n="info-certs-title">Certifications</h4><p data-i18n="info-certs-text">CCNA Certified (3 Modules)</p></div></div>
+                    <div class="info-card"><div class="info-icon"><i class="fas fa-briefcase"></i></div><div class="info-content"><h4 data-i18n="info-status-title">Status</h4><p data-i18n="info-status-text">Open for Opportunities</p></div></div>
                 </div>
             </div>
         </div>
@@ -136,15 +143,15 @@
     <section class="section section-alt" id="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Skills /&gt;</span>
-                <h2 class="section-title">Technical Skills</h2>
+                <span class="section-tag" data-i18n="skills-tag">&lt;Skills /&gt;</span>
+                <h2 class="section-title" data-i18n="skills-title">Technical Skills</h2>
                 <div class="section-line"></div>
             </div>
             <div class="skills-grid-new">
                 <div class="skill-card-new" data-color="#00d4aa">
                     <div class="skill-card-glow"></div>
                     <div class="skill-card-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>Networking</h3>
+                    <h3 data-i18n="skill-networking">Networking</h3>
                     <div class="skill-chips">
                         <span>CCNA: Intro to Networks</span>
                         <span>Switching & Routing</span>
@@ -159,7 +166,7 @@
                 <div class="skill-card-new" data-color="#0088ff">
                     <div class="skill-card-glow"></div>
                     <div class="skill-card-icon"><i class="fas fa-desktop"></i></div>
-                    <h3>Operating Systems</h3>
+                    <h3 data-i18n="skill-os">Operating Systems</h3>
                     <div class="skill-chips">
                         <span>Windows Administration</span>
                         <span>Linux Fundamentals</span>
@@ -168,7 +175,7 @@
                 <div class="skill-card-new" data-color="#a855f7">
                     <div class="skill-card-glow"></div>
                     <div class="skill-card-icon" style="background:linear-gradient(135deg,#a855f7,#6366f1)"><i class="fas fa-code"></i></div>
-                    <h3>Programming</h3>
+                    <h3 data-i18n="skill-programming">Programming</h3>
                     <div class="skill-chips">
                         <span>Python</span>
                         <span>C / C++</span>
@@ -178,7 +185,7 @@
                 <div class="skill-card-new" data-color="#f97316">
                     <div class="skill-card-glow"></div>
                     <div class="skill-card-icon" style="background:linear-gradient(135deg,#f97316,#ef4444)"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Web & Mobile</h3>
+                    <h3 data-i18n="skill-webmobile">Web & Mobile</h3>
                     <div class="skill-chips">
                         <span>HTML</span>
                         <span>CSS</span>
@@ -191,11 +198,11 @@
 
             <!-- Tools Orbit -->
             <div class="tools-section">
-                <h3 class="tools-title"><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <h3 class="tools-title"><i class="fas fa-tools"></i> <span data-i18n="tools-title-text">Tools & Technologies</span></h3>
                 <div class="tools-orbit-container">
                     <div class="orbit-center">
                         <i class="fas fa-cogs"></i>
-                        <span>Tools</span>
+                        <span data-i18n="tools-center">Tools</span>
                     </div>
                     <div class="orbit-ring" id="orbitRing">
                         <div class="orbit-item" style="--i:0;--total:4">
@@ -232,20 +239,20 @@
     <section class="section" id="experience">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Experience /&gt;</span>
-                <h2 class="section-title">Professional Experience</h2>
+                <span class="section-tag" data-i18n="exp-tag">&lt;Experience /&gt;</span>
+                <h2 class="section-title" data-i18n="exp-title">Professional Experience</h2>
                 <div class="section-line"></div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"><div class="marker-dot"></div><div class="marker-line"></div></div>
                     <div class="timeline-content">
-                        <div class="timeline-header"><h3>Trainee – Information Technology Institute</h3><span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2025 – Present</span></div>
+                        <div class="timeline-header"><h3 data-i18n="exp-job-title">Trainee – Information Technology Institute</h3><span class="timeline-date"><i class="far fa-calendar-alt"></i> <span data-i18n="exp-date">Jul 2025 – Present</span></span></div>
                         <ul class="timeline-list">
-                            <li>Completed intensive training in Flutter development</li>
-                            <li>Developed a fully integrated mobile e-commerce application</li>
-                            <li>Integrated Firebase Authentication, Firestore database, and REST APIs</li>
-                            <li>Participated in technical workshops and developer events</li>
+                            <li data-i18n="exp-li1">Completed intensive training in Flutter development</li>
+                            <li data-i18n="exp-li2">Developed a fully integrated mobile e-commerce application</li>
+                            <li data-i18n="exp-li3">Integrated Firebase Authentication, Firestore database, and REST APIs</li>
+                            <li data-i18n="exp-li4">Participated in technical workshops and developer events</li>
                         </ul>
                         <div class="timeline-tags"><span class="mini-tag">Flutter</span><span class="mini-tag">Firebase</span><span class="mini-tag">REST APIs</span><span class="mini-tag">Dart</span></div>
                     </div>
@@ -258,59 +265,59 @@
     <section class="section section-alt" id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Projects /&gt;</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <span class="section-tag" data-i18n="projects-tag">&lt;Projects /&gt;</span>
+                <h2 class="section-title" data-i18n="projects-title">Featured Projects</h2>
                 <div class="section-line"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-cisco.png" alt="Cisco Network Simulation"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="cisco-network">
+                    <div class="project-image"><img src="images/project-cisco.png" alt="Cisco Network Simulation"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <h3>Cisco Network Simulation</h3>
-                        <p>Designed and implemented enterprise-level network using Packet Tracer. Configured VLANs, routing protocols, and basic security policies.</p>
+                        <h3 data-i18n="project1-title">Cisco Network Simulation</h3>
+                        <p data-i18n="project1-desc">Designed and implemented enterprise-level network using Packet Tracer. Configured VLANs, routing protocols, and basic security policies.</p>
                         <div class="project-tech"><span>Packet Tracer</span><span>VLANs</span><span>Routing</span><span>Security</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-ecommerce-mobile.png" alt="Integrated E-commerce Store"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="ecommerce-mobile">
+                    <div class="project-image"><img src="images/project-ecommerce-mobile.png" alt="Integrated E-commerce Store"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <div class="project-date">Jul 2025 – Aug 2025</div>
-                        <h3>Integrated E-commerce Store</h3>
-                        <p>Developed a mobile e-commerce application using Flutter. Integrated Firebase, Firestore, and REST APIs.</p>
+                        <div class="project-date" data-i18n="project2-date">Jul 2025 – Aug 2025</div>
+                        <h3 data-i18n="project2-title">Integrated E-commerce Store</h3>
+                        <p data-i18n="project2-desc">Developed a mobile e-commerce application using Flutter. Integrated Firebase, Firestore, and REST APIs.</p>
                         <div class="project-tech"><span>Flutter</span><span>Firebase</span><span>Firestore</span><span>REST APIs</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-ecommerce-web.png" alt="Web E-commerce Platform"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="ecommerce-web">
+                    <div class="project-image"><img src="images/project-ecommerce-web.png" alt="Web E-commerce Platform"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <div class="project-date">Mar 2025 – May 2025</div>
-                        <h3>Web E-commerce Platform</h3>
-                        <p>Developed a full web-based e-commerce platform. Improved browsing and purchasing workflow.</p>
+                        <div class="project-date" data-i18n="project3-date">Mar 2025 – May 2025</div>
+                        <h3 data-i18n="project3-title">Web E-commerce Platform</h3>
+                        <p data-i18n="project3-desc">Developed a full web-based e-commerce platform. Improved browsing and purchasing workflow.</p>
                         <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Web Dev</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-iot-hand.png" alt="IoT Robotic Hand"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="iot-hand">
+                    <div class="project-image"><img src="images/project-iot-hand.png" alt="IoT Robotic Hand"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <div class="project-date">Mar 2024 – May 2024</div>
-                        <h3>IoT Robotic Hand</h3>
-                        <p>Designed and programmed a robotic hand using IoT technologies. Implemented embedded programming for control.</p>
+                        <div class="project-date" data-i18n="project4-date">Mar 2024 – May 2024</div>
+                        <h3 data-i18n="project4-title">IoT Robotic Hand</h3>
+                        <p data-i18n="project4-desc">Designed and programmed a robotic hand using IoT technologies. Implemented embedded programming for control.</p>
                         <div class="project-tech"><span>IoT</span><span>Embedded</span><span>Hardware</span><span>Programming</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-embedded.png" alt="Embedded System - Remote Control"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="smart-home">
+                    <div class="project-image"><img src="images/project-embedded.png" alt="Embedded Smart Home"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <h3>Embedded Smart Home</h3>
-                        <p>Built a smart home system with remote control powered by solar energy. Features distance sensing, motion detection, gas detection with alarms, LED indicators, and password-protected access for security.</p>
+                        <h3 data-i18n="project5-title">Embedded Smart Home</h3>
+                        <p data-i18n="project5-desc">Built a smart home system with remote control powered by solar energy. Features distance sensing, motion detection, gas detection with alarms, LED indicators, and password-protected access for security.</p>
                         <div class="project-tech"><span>Embedded</span><span>Solar Power</span><span>Sensors</span><span>Remote Control</span><span>Security</span></div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"><img src="images/project-chat-java.png" alt="Network Programming Chat App"><div class="project-overlay"><i class="fas fa-expand"></i></div></div>
+                <div class="project-card" data-project="chat-app">
+                    <div class="project-image"><img src="images/project-chat-java.png" alt="Network Programming Chat App"><div class="project-overlay"><i class="fas fa-search-plus"></i><span data-i18n="modal-view-details">View Details</span></div></div>
                     <div class="project-content">
-                        <h3>Network Programming Chat App</h3>
-                        <p>Developed a real-time chat application using Java socket programming. Implemented client-server architecture with multi-threaded connections for simultaneous user communication.</p>
+                        <h3 data-i18n="project6-title">Network Programming Chat App</h3>
+                        <p data-i18n="project6-desc">Developed a real-time chat application using Java socket programming. Implemented client-server architecture with multi-threaded connections for simultaneous user communication.</p>
                         <div class="project-tech"><span>Java</span><span>Socket Programming</span><span>Networking</span><span>Multi-Threading</span></div>
                     </div>
                 </div>
@@ -322,37 +329,192 @@
     <section class="section" id="certificates">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Certificates /&gt;</span>
-                <h2 class="section-title">Certifications</h2>
+                <span class="section-tag" data-i18n="certs-tag">&lt;Certificates /&gt;</span>
+                <h2 class="section-title" data-i18n="certs-title">Certifications</h2>
                 <div class="section-line"></div>
             </div>
             <div class="certs-grid">
                 <div class="cert-group">
-                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-network-wired"></i></div><h3>Cisco Networking Academy</h3></div>
+                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-network-wired"></i></div><h3 data-i18n="cert-cisco-title">Cisco Networking Academy</h3></div>
                     <div class="cert-list">
-                        <div class="cert-item"><i class="fas fa-award"></i><span>CCNA: Introduction to Networks</span></div>
-                        <div class="cert-item"><i class="fas fa-award"></i><span>CCNA: Switching, Routing & Wireless Essentials</span></div>
-                        <div class="cert-item"><i class="fas fa-award"></i><span>CCNA: Enterprise Networking, Security & Automation</span></div>
-                        <div class="cert-item"><i class="fas fa-shield-alt"></i><span>Introduction to Cybersecurity</span></div>
-                        <div class="cert-item"><i class="fas fa-shield-alt"></i><span>Endpoint Security</span></div>
-                        <div class="cert-item"><i class="fas fa-microchip"></i><span>Internet of Things (IoT)</span></div>
+                        <div class="cert-item"><i class="fas fa-award"></i><span data-i18n="cert-cisco1">CCNA: Introduction to Networks</span></div>
+                        <div class="cert-item"><i class="fas fa-award"></i><span data-i18n="cert-cisco2">CCNA: Switching, Routing & Wireless Essentials</span></div>
+                        <div class="cert-item"><i class="fas fa-award"></i><span data-i18n="cert-cisco3">CCNA: Enterprise Networking, Security & Automation</span></div>
+                        <div class="cert-item"><i class="fas fa-shield-alt"></i><span data-i18n="cert-cisco4">Introduction to Cybersecurity</span></div>
+                        <div class="cert-item"><i class="fas fa-shield-alt"></i><span data-i18n="cert-cisco5">Endpoint Security</span></div>
+                        <div class="cert-item"><i class="fas fa-microchip"></i><span data-i18n="cert-cisco6">Internet of Things (IoT)</span></div>
+                        <div class="cert-item"><i class="fas fa-certificate"></i><span data-i18n="cert-cisco7">Cisco Certified Support Technician (CCST) Networking</span></div>
                     </div>
                 </div>
                 <div class="cert-group">
-                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-laptop-code"></i></div><h3>Information Technology Institute</h3></div>
+                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-laptop-code"></i></div><h3 data-i18n="cert-iti-title">Information Technology Institute</h3></div>
                     <div class="cert-list">
-                        <div class="cert-item"><i class="fas fa-mobile-alt"></i><span>Mobile App Development with Flutter</span></div>
-                        <div class="cert-item"><i class="fas fa-brain"></i><span>Artificial Intelligence Fundamentals</span></div>
+                        <div class="cert-item"><i class="fas fa-mobile-alt"></i><span data-i18n="cert-iti1">Mobile App Development with Flutter</span></div>
+                        <div class="cert-item"><i class="fas fa-brain"></i><span data-i18n="cert-iti2">Artificial Intelligence Fundamentals</span></div>
                     </div>
                 </div>
                 <div class="cert-group">
-                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-building"></i></div><h3>IBM</h3></div>
-                    <div class="cert-list"><div class="cert-item"><i class="fas fa-robot"></i><span>Artificial Intelligence (AI) Certification</span></div></div>
+                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-building"></i></div><h3 data-i18n="cert-ibm-title">IBM</h3></div>
+                    <div class="cert-list"><div class="cert-item"><i class="fas fa-robot"></i><span data-i18n="cert-ibm1">Artificial Intelligence (AI) Certification</span></div></div>
                 </div>
                 <div class="cert-group">
-                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-headset"></i></div><h3>National Telecommunication Institute</h3></div>
-                    <div class="cert-list"><div class="cert-item"><i class="fas fa-tools"></i><span>IT Technical Support Training</span></div></div>
+                    <div class="cert-group-header"><div class="cert-logo"><i class="fas fa-headset"></i></div><h3 data-i18n="cert-nti-title">National Telecommunication Institute</h3></div>
+                    <div class="cert-list"><div class="cert-item"><i class="fas fa-tools"></i><span data-i18n="cert-nti1">IT Technical Support Training</span></div></div>
                 </div>
+            </div>
+
+            <!-- Certificate Gallery Carousel -->
+            <div class="cert-gallery-section">
+                <h3 class="cert-gallery-title"><i class="fas fa-images"></i> <span data-i18n="cert-gallery-title">Certificate Gallery</span></h3>
+                <div class="cert-carousel-wrapper">
+                    <button class="cert-carousel-btn cert-prev" id="certPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                    <div class="cert-carousel" id="certCarousel">
+                        <div class="cert-slide" data-label="CCST Networking">
+                            <img src="images/certs/ccst-networking.png" alt="Cisco CCST Networking" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="CCNA: Intro to Networks">
+                            <img src="images/certs/ccna-intro.png" alt="CCNA Introduction to Networks" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="CCNA: Switching & Routing">
+                            <img src="images/certs/ccna-switching.png" alt="CCNA Switching Routing" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="CCNA: Enterprise Networking">
+                            <img src="images/certs/ccna-enterprise.png" alt="CCNA Enterprise Networking" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Introduction to Cybersecurity">
+                            <img src="images/certs/cybersecurity.png" alt="Introduction to Cybersecurity" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Internet of Things (IoT)">
+                            <img src="images/certs/iot.png" alt="Internet of Things" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="IBM AI Certification">
+                            <img src="images/certs/ibm-ai.png" alt="IBM AI Fundamentals" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="ITI Certificate">
+                            <img src="images/certs/iti-course.png" alt="ITI Course Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="NVIDIA - LLM & Prompt Engineering">
+                            <img src="images/certs/nvidia-llm.png" alt="NVIDIA LLM Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="AI for All - GenAI">
+                            <img src="images/certs/ai-genai.png" alt="AI GenAI Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Learn-A-Thon 2026">
+                            <img src="images/certs/learnathon.png" alt="Networking Academy Learn-A-Thon" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="C++ Essentials">
+                            <img src="images/certs/cpp-essentials.png" alt="C++ Essentials" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Git & GitHub">
+                            <img src="images/certs/git-github.png" alt="Git and GitHub" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Hardware Basics">
+                            <img src="images/certs/hardware-basics.png" alt="Computer Hardware Basics" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Java Intermediate">
+                            <img src="images/certs/sololearn-java.jpg" alt="Java Intermediate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Introduction to HTML">
+                            <img src="images/certs/sololearn-html.jpg" alt="Introduction to HTML" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Introduction to C">
+                            <img src="images/certs/sololearn-c.jpg" alt="Introduction to C" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Introduction to C++">
+                            <img src="images/certs/sololearn-cpp.jpg" alt="Introduction to C++" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Ali Arafa Certificate">
+                            <img src="images/certs/ali-arafa-cert.png" alt="Ali Arafa Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_2.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_4.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_14.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_15.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_17.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_20.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_21.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_23.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_24.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_26.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_27.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_28.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_29.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_30.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_31.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_32.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_33.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_34.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_35.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_36.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_37.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_38.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_39.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_40.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_41.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_42.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_43.png" alt="Certificate" loading="lazy">
+                        </div>
+                        <div class="cert-slide" data-label="Certificate">
+                            <img src="images/certs/all/cert_44.png" alt="Certificate" loading="lazy">
+                        </div>
+                    </div>
+                    <button class="cert-carousel-btn cert-next" id="certNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="cert-carousel-dots" id="certDots"></div>
+                <div class="cert-counter" id="certCounter">1 / 19</div>
             </div>
         </div>
     </section>
@@ -361,34 +523,34 @@
     <section class="section section-alt" id="education">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Education /&gt;</span>
-                <h2 class="section-title">Education & Awards</h2>
+                <span class="section-tag" data-i18n="edu-tag">&lt;Education /&gt;</span>
+                <h2 class="section-title" data-i18n="edu-title">Education & Awards</h2>
                 <div class="section-line"></div>
             </div>
             <div class="edu-awards-grid">
                 <div class="edu-card">
                     <div class="edu-icon"><i class="fas fa-university"></i></div>
                     <div class="edu-content">
-                        <h3>Bachelor of Information Technology</h3>
-                        <h4>Network Engineering – In Progress</h4>
-                        <p class="edu-school">Fayoum International Technological University</p>
+                        <h3 data-i18n="edu-degree">Bachelor of Information Technology</h3>
+                        <h4 data-i18n="edu-major">Network Engineering – In Progress</h4>
+                        <p class="edu-school" data-i18n="edu-school">Fayoum International Technological University</p>
                         <div class="edu-meta">
-                            <span><i class="far fa-calendar-alt"></i> Oct 2023 – Jul 2027 (Expected)</span>
-                            <span><i class="fas fa-map-marker-alt"></i> Fayoum, Egypt</span>
+                            <span><i class="far fa-calendar-alt"></i> <span data-i18n="edu-date">Oct 2023 – Jul 2027 (Expected)</span></span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="edu-location">Fayoum, Egypt</span></span>
                         </div>
                     </div>
                 </div>
                 <div class="awards-card">
-                    <h3><i class="fas fa-trophy"></i> Awards & Recognition</h3>
-                    <div class="award-item"><div class="award-icon"><i class="fas fa-medal"></i></div><div><h4>Second Best Project</h4><p>Second-Year College Competition</p></div></div>
-                    <div class="award-item"><div class="award-icon"><i class="fas fa-star"></i></div><div><h4>Cisco Scholarship Competition</h4><p>Recognized participant</p></div></div>
+                    <h3><i class="fas fa-trophy"></i> <span data-i18n="awards-title">Awards & Recognition</span></h3>
+                    <div class="award-item"><div class="award-icon"><i class="fas fa-medal"></i></div><div><h4 data-i18n="award1-title">Second Best Project</h4><p data-i18n="award1-desc">Second-Year College Competition</p></div></div>
+                    <div class="award-item"><div class="award-icon"><i class="fas fa-star"></i></div><div><h4 data-i18n="award2-title">Cisco Scholarship Competition</h4><p data-i18n="award2-desc">Recognized participant</p></div></div>
                 </div>
             </div>
             <div class="languages-section">
-                <h3><i class="fas fa-language"></i> Languages</h3>
+                <h3><i class="fas fa-language"></i> <span data-i18n="languages-title">Languages</span></h3>
                 <div class="lang-grid">
-                    <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Good</span></div>
-                    <div class="lang-item"><span class="lang-name">Arabic</span><span class="lang-level">Excellent</span></div>
+                    <div class="lang-item"><span class="lang-name" data-i18n="lang-english">English</span><span class="lang-level" data-i18n="lang-english-level">Good</span></div>
+                    <div class="lang-item"><span class="lang-name" data-i18n="lang-arabic">Arabic</span><span class="lang-level" data-i18n="lang-arabic-level">Excellent</span></div>
                 </div>
             </div>
         </div>
@@ -398,14 +560,14 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">&lt;Contact /&gt;</span>
-                <h2 class="section-title">Get In Touch</h2>
+                <span class="section-tag" data-i18n="contact-tag">&lt;Contact /&gt;</span>
+                <h2 class="section-title" data-i18n="contact-title">Get In Touch</h2>
                 <div class="section-line"></div>
             </div>
             <div class="contact-grid">
-                <div class="contact-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h4>Email</h4><a href="mailto:ali141204.asd@gmail.com">ali141204.asd@gmail.com</a></div>
-                <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><h4>Phone</h4><a href="tel:+201153302528">01153302528</a></div>
-                <div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h4>Location</h4><p>El Qanater El Khayria, Qalyubia, Egypt</p></div>
+                <div class="contact-card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><h4 data-i18n="contact-email-title">Email</h4><a href="mailto:ali141204.asd@gmail.com">ali141204.asd@gmail.com</a></div>
+                <div class="contact-card"><div class="contact-icon"><i class="fas fa-phone"></i></div><h4 data-i18n="contact-phone-title">Phone</h4><a href="tel:+201153302528">01153302528</a></div>
+                <div class="contact-card"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><h4 data-i18n="contact-location-title">Location</h4><p data-i18n="contact-location-text">El Qanater El Khayria, Qalyubia, Egypt</p></div>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/ali-arafa-6672b8322" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -415,29 +577,35 @@
 
             <!-- Contact Form -->
             <div class="contact-form-wrapper">
-                <h3 class="form-title"><i class="fas fa-paper-plane"></i> Send Me a Message</h3>
+                <h3 class="form-title"><i class="fas fa-paper-plane"></i> <span data-i18n="form-title">Send Me a Message</span></h3>
                 <form id="contactForm" class="contact-form">
+                    <!-- Web3Forms Access Key - user needs to replace with their own -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" id="hidden_subject" value="New Portfolio Contact">
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                    <!-- Honeypot spam protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="from_name">Your Name</label>
-                            <input type="text" id="from_name" name="from_name" placeholder="John Doe" required>
+                            <label for="from_name" data-i18n="form-name-label">Your Name</label>
+                            <input type="text" id="from_name" name="name" placeholder="John Doe" data-i18n-placeholder="form-name-placeholder" required>
                         </div>
                         <div class="form-group">
-                            <label for="from_email">Your Email</label>
-                            <input type="email" id="from_email" name="from_email" placeholder="john@example.com" required>
+                            <label for="from_email" data-i18n="form-email-label">Your Email</label>
+                            <input type="email" id="from_email" name="email" placeholder="john@example.com" data-i18n-placeholder="form-email-placeholder" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="How can I help you?" required>
+                        <label for="subject" data-i18n="form-subject-label">Subject</label>
+                        <input type="text" id="subject" name="subject_line" placeholder="How can I help you?" data-i18n-placeholder="form-subject-placeholder" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        <label for="message" data-i18n="form-message-label">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." data-i18n-placeholder="form-message-placeholder" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
                         <i class="fas fa-paper-plane"></i>
-                        <span>Send Message</span>
+                        <span data-i18n="form-submit">Send Message</span>
                     </button>
                     <div class="form-status" id="formStatus"></div>
                 </form>
@@ -449,8 +617,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Ali Arafa. All rights reserved.</p>
-                <p class="footer-tagline">Built with <i class="fas fa-heart" style="color: var(--accent-primary);"></i> and passion for networking</p>
+                <p data-i18n="footer-copy">&copy; 2025 Ali Arafa. All rights reserved.</p>
+                <p class="footer-tagline"><span data-i18n="footer-tagline">Built with</span> <i class="fas fa-heart" style="color: var(--accent-primary);"></i> <span data-i18n="footer-tagline-end">and passion for networking</span></p>
             </div>
         </div>
     </footer>
@@ -461,6 +629,29 @@
         <img src="" alt="Project Preview" id="lightboxImg">
     </div>
 
+    <!-- Project Detail Modal -->
+    <div class="project-modal-overlay" id="projectModal">
+        <div class="project-modal">
+            <button class="project-modal-close" id="projectModalClose"><i class="fas fa-times"></i></button>
+            <div class="project-modal-image">
+                <img src="" alt="" id="modalImage">
+            </div>
+            <div class="project-modal-body">
+                <h2 class="project-modal-title" id="modalTitle"></h2>
+                <p class="project-modal-description" id="modalDescription"></p>
+                <div class="project-modal-features">
+                    <h4><i class="fas fa-star"></i> <span data-i18n="modal-features">Key Features</span></h4>
+                    <ul id="modalFeatures"></ul>
+                </div>
+                <div class="project-modal-techs">
+                    <h4><i class="fas fa-code"></i> <span data-i18n="modal-tech">Technologies Used</span></h4>
+                    <div class="modal-tech-chips" id="modalTechs"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
